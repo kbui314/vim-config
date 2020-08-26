@@ -11,6 +11,7 @@ call plug#begin("~/.vim/plugged")
 	Plug 'dense-analysis/ale'
 	Plug 'wellle/targets.vim'
 	Plug 'tpope/vim-surround'
+	Plug 'tpope/vim-commentary'
 	Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
 	Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 	Plug 'sheerun/vim-polyglot'
