@@ -12,6 +12,8 @@ call plug#begin("~/.vim/plugged")
 	Plug 'wellle/targets.vim'
 	Plug 'tpope/vim-surround'
 	Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
+	Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+	Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 if(has ("termguicolors"))
@@ -32,6 +34,7 @@ autocmd bufenter * if(winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTa
 nnoremap <silent> <C-g> :NERDTreeToggle<CR>
 
 let g:coc_global_extensions = ['coc-emmet','coc-css','coc-html','coc-json','coc-prettier','coc-tsserver']
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
 set nowrap
 set tabstop=4 softtabstop=4

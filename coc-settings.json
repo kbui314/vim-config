@@ -1,0 +1,12 @@
+{
+    "coc.preferences.formatOnSaveFiletypes": [
+        "css",
+        "Markdown",
+        "javascript",
+        "typescript",
+        "typescriptreact",
+        "json",
+        "graphql"
+    ],
+    "prettier.tabWidth": 4
+}
