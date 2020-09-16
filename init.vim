@@ -17,6 +17,7 @@ call plug#begin("~/.vim/plugged")
 	Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 	Plug 'sheerun/vim-polyglot'
 	Plug 'tpope/vim-ragtag'
+	Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 if(has ("termguicolors"))
