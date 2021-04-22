@@ -1,7 +1,7 @@
 call plug#begin("~/.vim/plugged")
 	Plug 'mhartington/oceanic-next'
-	" Plug 'flrnd/candid.vim'
 	Plug 'arcticicestudio/nord-vim'
+	Plug 'lifepillar/vim-solarized8'
 	Plug 'raimondi/delimitmate'
 	Plug 'scrooloose/nerdtree'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -23,10 +23,10 @@ call plug#end()
 if(has ("termguicolors"))
 	set termguicolors
 endif
-set background=dark
+set background=light
 syntax enable
-colorscheme OceanicNext 
-" colorscheme candid
+colorscheme solarized8
+" colorscheme OceanicNext 
 " colorscheme nord
 
 let g:NERDTreeShowHidden = 1
@@ -52,6 +52,9 @@ set hidden
 set ignorecase
 set smartcase
 set relativenumber
+set signcolumn=yes
+set scrolloff=8
+set clipboard=unnamedplus
 " open new split panes to right and below
 set splitright
 set splitbelow
