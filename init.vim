@@ -18,6 +18,7 @@ call plug#begin("~/.vim/plugged")
 	Plug 'sheerun/vim-polyglot'
 	Plug 'tpope/vim-ragtag'
 	Plug 'ryanoasis/vim-devicons'
+	Plug 'itchyny/lightline.vim'
 call plug#end()
 
 if(has ("termguicolors"))
@@ -55,6 +56,7 @@ set relativenumber
 set signcolumn=yes
 set scrolloff=8
 set clipboard=unnamedplus
+set cursorline
 " open new split panes to right and below
 set splitright
 set splitbelow
@@ -127,4 +129,8 @@ function! s:check_back_space() abort
 	return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
+let g:lightline = {
+	\ 'colorscheme': 'solarized',
+	\ 'component': {'lineinfo': "%{line('.') . '/' . line('$')}"}
+	\}
 
