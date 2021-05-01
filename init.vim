@@ -19,6 +19,8 @@ call plug#begin("~/.vim/plugged")
 	Plug 'tpope/vim-ragtag'
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'itchyny/lightline.vim'
+	Plug 'puremourning/vimspector'
+	Plug 'szw/vim-maximizer'
 call plug#end()
 
 if(has ("termguicolors"))
@@ -37,7 +39,7 @@ let g:NERDTreeStatusline = ''
 " Automatically close nvim if NERDTree is only thing left open
 autocmd bufenter * if(winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " Toggle
-nnoremap <silent> <C-f> :NERDTreeToggle<CR>
+nnoremap <silent> <C-a> :NERDTreeToggle<CR>
 
 let g:coc_global_extensions = ['coc-emmet','coc-css','coc-html','coc-json','coc-prettier','coc-tsserver']
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
@@ -134,3 +136,5 @@ let g:lightline = {
 	\ 'component': {'lineinfo': "%{line('.') . '/' . line('$')}"}
 	\}
 
+let g:vimspector_enable_mappings = 'HUMAN'
+" packadd! vimspector
